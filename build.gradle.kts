@@ -2,20 +2,22 @@ import arrow.optics.plugin.arrowOptics
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val api_version: String by project
-val mod_id: String by project
-val mod_group_id: String by project
 
 plugins {
     idea
-    kotlin("jvm")
-    kotlin("plugin.serialization")
+    kotlin("jvm") version "2.2.20"
+    kotlin("plugin.serialization") version "2.2.20"
     id("io.arrow-kt.optics") version "2.2.1.1"
 }
 
 version = api_version
 
 base {
-    archivesName.set("sparkcore-api")   // artifactId
+    archivesName.set("spark-core-api")
+}
+
+repositories {
+    mavenCentral()
 }
 
 dependencies {
