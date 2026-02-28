@@ -34,6 +34,7 @@ dependencies {
     implementation("io.github.quillraven.fleks:Fleks-jvm:2.12")
     implementation("org.graalvm.polyglot:polyglot:24.2.1")
     implementation("org.graalvm.polyglot:js:24.2.1")
+    implementation("org.slf4j:slf4j-api:2.0.17")
 }
 
 val compileKotlin: KotlinCompile by tasks

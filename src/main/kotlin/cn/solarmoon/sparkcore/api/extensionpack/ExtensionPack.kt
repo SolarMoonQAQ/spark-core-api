@@ -4,6 +4,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class ExtensionPack(
-    val entries: Map<String, ByteArray>,
-    val metaInfo: ExtensionPackMetaInfo
+    val metaInfo: ExtensionPackMetaInfo,
+    val entries: Map<String, ByteArray>
 )
