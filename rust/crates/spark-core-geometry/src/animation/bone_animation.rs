@@ -1,5 +1,5 @@
 use crate::animation::keyframe_track::{KeyframeRotTrack, KeyframeTrack};
-use glam::{EulerRot, Mat4, Quat, Vec3};
+use glam::{Mat4, Quat, Vec3};
 #[cfg(feature = "serde")]
 use serde::Deserialize;
 #[cfg(feature = "serde")]

@@ -1,3 +1,9 @@
+use crate::model::bone::Bone;
+use crate::model::cube::Cube;
+use crate::model::locator::Locator;
+use crate::model::model::Model;
+use crate::model::model_description::ModelDescription;
+use crate::model::uv::{Direction, FaceUV, UVUnion};
 use glam::{EulerRot, Quat};
 use spark_core_geometry_bedrock::model::bone::BoneDto;
 use spark_core_geometry_bedrock::model::cube::CubeDto;
@@ -5,12 +11,6 @@ use spark_core_geometry_bedrock::model::locator::LocatorDto;
 use spark_core_geometry_bedrock::model::model::ModelDto;
 use spark_core_geometry_bedrock::model::model_description::ModelDescriptionDto;
 use spark_core_geometry_bedrock::model::uv::{DirectionDto, FaceUVDto, UVUnionDto};
-use crate::model::bone::Bone;
-use crate::model::cube::Cube;
-use crate::model::locator::Locator;
-use crate::model::model::Model;
-use crate::model::model_description::ModelDescription;
-use crate::model::uv::{Direction, FaceUV, UVUnion};
 
 impl From<FaceUVDto> for FaceUV {
     fn from(dto: FaceUVDto) -> Self {

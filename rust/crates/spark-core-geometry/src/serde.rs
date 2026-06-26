@@ -1,7 +1,7 @@
+use indexmap::IndexMap;
 use serde::{Deserialize, Deserializer};
 use std::collections::HashMap;
 use std::hash::Hash;
-use indexmap::IndexMap;
 
 // 1. 给特征加上泛型参数 K
 pub trait InjectKey<K> {

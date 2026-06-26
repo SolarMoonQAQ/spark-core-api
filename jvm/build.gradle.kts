@@ -1,12 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val api_version: String by project
-val arrow_version: String by project
-val graaljs_version: String by project
 
 plugins {
     idea
-    kotlin("jvm") apply true
+    kotlin("jvm") version "2.4.0"
 }
 
 version = api_version

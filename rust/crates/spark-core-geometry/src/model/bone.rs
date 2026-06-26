@@ -1,7 +1,7 @@
 use crate::model::cube::Cube;
 use crate::model::error::ModelError;
 use crate::model::locator::Locator;
-use glam::{EulerRot, Mat4, Quat, Vec3};
+use glam::{Mat4, Quat, Vec3};
 use indexmap::IndexMap;
 #[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};

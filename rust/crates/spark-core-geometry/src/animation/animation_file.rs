@@ -1,9 +1,9 @@
 use crate::animation::animation::Animation;
 #[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
 #[cfg(feature = "serde-bedrock")]
 use spark_core_geometry_bedrock::animation::animation_file::AnimationFileDto;
+use std::collections::HashMap;
 
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 #[cfg_attr(feature = "serde-bedrock", serde(from = "AnimationFileDto"))]

@@ -1,9 +1,9 @@
-use glam::{EulerRot, Mat4, Quat, Vec2, Vec3};
+use crate::model::model_description::ModelDescription;
 use crate::model::uv::{Direction, UVUnion};
+use crate::model::vertex::Vertex;
+use glam::{Mat4, Quat, Vec2, Vec3};
 #[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};
-use crate::model::model_description::ModelDescription;
-use crate::model::vertex::Vertex;
 
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 #[derive(Debug, Clone, Copy)]
