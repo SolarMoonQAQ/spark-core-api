@@ -1,0 +1,42 @@
+[package]
+name = "splines"
+version = "5.0.0"
+license = "BSD-3-Clause"
+authors = ["Dimitri Sabadie <hadronized@strongly-typed-thoughts.net>"]
+description = "Spline interpolation made easy"
+keywords = ["spline", "interpolation"]
+categories = ["science"]
+homepage = "https://git.sr.ht/~hadronized/splines"
+repository = "https://git.sr.ht/~hadronized/splines"
+documentation = "https://docs.rs/splines"
+readme = "README.md"
+
+rust-version = "1.86.0"
+edition = "2024"
+
+[features]
+default = ["std"]
+std = []
+
+[dependencies]
+glam = { workspace = true, optional = true }
+serde = { workspace = true, optional = true }
+cgmath = { version = ">=0.17, <0.19", optional = true }
+nalgebra = { version = "0.35.0", optional = true }
+
+# needed for no_std, to provide cos impl
+num-traits = { version = "0.2", default-features = false, features = ["libm"], optional = true }
+
+[dev-dependencies]
+float-cmp = ">=0.6, < 0.11"
+serde_json = "1"
+
+[package.metadata.docs.rs]
+features = ["std", "cgmath", "glam", "nalgebra", "serde"]
+
+[[example]]
+name = "hello-world"
+
+[[example]]
+name = "serialization"
+required-features = ["serde"]

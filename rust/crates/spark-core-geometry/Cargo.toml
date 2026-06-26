@@ -1,0 +1,27 @@
+[package]
+name = "spark-core-geometry"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+default = ["serde-bedrock"]
+serde = ["glam/serde", "splines/serde", "indexmap/serde", "enum-map/serde", "dep:serde"]
+serde-bedrock = ["serde", "spark-core-geometry-bedrock"]
+
+[dependencies]
+serde = { workspace = true, optional = true }
+spark-core-geometry-bedrock = { workspace = true, optional = true }
+splines.workspace = true
+glam.workspace = true
+smart-default.workspace = true
+indexmap.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+enum-map.workspace = true
+
+[dev-dependencies]
+criterion.workspace = true
+
+[[bench]]
+name = "benchmark"
+harness = false

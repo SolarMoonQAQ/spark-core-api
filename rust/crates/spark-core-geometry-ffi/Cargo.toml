@@ -1,0 +1,15 @@
+[package]
+name = "spark-core-geometry-ffi"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+headers = ["safer-ffi/headers"]
+
+[dependencies]
+spark-core-geometry.workspace = true
+serde_json.workspace = true
+safer-ffi.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
